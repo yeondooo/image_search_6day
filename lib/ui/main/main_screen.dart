@@ -22,6 +22,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     final viewModel = context.watch<MainViewModel>();
+    final state = viewModel.state;
 
     return Scaffold(
       appBar: AppBar(
@@ -46,9 +47,9 @@ class _MainScreenState extends State<MainScreen> {
               shrinkWrap: true,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2),
-              itemCount: viewModel.photos.length,
+              itemCount: state.photos.length,
               itemBuilder: (context, index) {
-                final photo = viewModel.photos[index];
+                final photo = state.photos[index];
                 return Hero(
                   tag: photo.id,
                   child: GestureDetector(
