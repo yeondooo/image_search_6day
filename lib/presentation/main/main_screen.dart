@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:image_search_6day/ui/main/main_viewmodel.dart';
+import 'package:image_search_6day/presentation/main/main_viewmodel.dart';
 import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {
